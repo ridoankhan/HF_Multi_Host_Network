@@ -16,7 +16,7 @@ docker swarm join --token <token given from terminal> --advertise-addr <host n i
 
 4. We need to create a docker overlay network on the host-1
 
-docker network create --attachable --driver overlay first-network
+docker network create --attachable --driver overlay test
 
 -> Make sure this network is visible throughout all the other hosts within the network
 
