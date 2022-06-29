@@ -86,11 +86,10 @@ queryInstalled() {
 
 approveForMyOrg1() {
     setGlobalsForPeer0Org1
-    echo PackageID is ${PACKAGE_ID}
     # set -x
     # Replace localhost with your orderer's vm IP address
-    peer lifecycle chaincode approveformyorg -o 10.40.41.162:7050 \
-        --ordererTLSHostnameOverride 10.40.41.162 --tls \
+    peer lifecycle chaincode approveformyorg -o localhost:7050 \
+        --ordererTLSHostnameOverride orderer.example.com --tls \
         --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${VERSION} \
         --init-required --package-id ${PACKAGE_ID} \
         --sequence ${VERSION}
@@ -100,8 +99,8 @@ approveForMyOrg1() {
 
 }
 
-queryInstalled
-approveForMyOrg1
+# queryInstalled
+# approveForMyOrg1
 
 checkCommitReadyness() {
     setGlobalsForPeer0Org1
