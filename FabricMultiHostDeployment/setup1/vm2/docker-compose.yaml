@@ -88,12 +88,12 @@ services:
       - ./:/etc/hyperledger/channel/
     extra_hosts:
       - "orderer.example.com:10.40.41.163"
-      - "orderer2.example.com:10.40.41.163"
-      - "orderer3.example.com:10.40.41.163"
-      - "peer0.org1.example.com:10.40.41.14"
-      - "peer1.org1.example.com:10.40.41.14"
-      - "peer0.org3.example.com:10.40.41.163"
-      - "peer1.org3.example.com:10.40.41.163"
+      # - "orderer2.example.com:10.40.41.163"
+      # - "orderer3.example.com:10.40.41.163"
+      # - "peer0.org1.example.com:10.40.41.14"
+      # - "peer1.org1.example.com:10.40.41.14"
+      # - "peer0.org3.example.com:10.40.41.163"
+      # - "peer1.org3.example.com:10.40.41.163"
     networks:
       - test
 
@@ -138,11 +138,11 @@ services:
       - ./:/etc/hyperledger/channel/
     extra_hosts:
       - "orderer.example.com:10.40.41.163"
-      - "orderer2.example.com:10.40.41.163"
-      - "orderer3.example.com:10.40.41.163"
-      - "peer0.org1.example.com:10.40.41.14"
-      - "peer1.org1.example.com:10.40.41.14"
-      - "peer0.org3.example.com:10.40.41.163"
-      - "peer1.org3.example.com:10.40.41.163"
+      # - "orderer2.example.com:10.40.41.163"
+      # - "orderer3.example.com:10.40.41.163"
+      # - "peer0.org1.example.com:10.40.41.14"
+      # - "peer1.org1.example.com:10.40.41.14"
+      # - "peer0.org3.example.com:10.40.41.163"
+      # - "peer1.org3.example.com:10.40.41.163"
     networks:
       - test
