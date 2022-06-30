@@ -38,6 +38,13 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls:/var/hyperledger/orderer/tls
+    extra_hosts:
+      - "peer0.org1.example.com:10.40.41.14"
+      - "peer1.org1.example.com:10.40.41.14"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"
   
   orderer2.example.com:
     container_name: orderer2.example.com
@@ -73,6 +80,13 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/hyperledger/orderer/tls
+    extra_hosts:
+      - "peer0.org1.example.com:10.40.41.14"
+      - "peer1.org1.example.com:10.40.41.14"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"
 
 
   orderer3.example.com:
@@ -109,3 +123,10 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls:/var/hyperledger/orderer/tls
+    extra_hosts:
+      - "peer0.org1.example.com:10.40.41.14"
+      - "peer1.org1.example.com:10.40.41.14"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"

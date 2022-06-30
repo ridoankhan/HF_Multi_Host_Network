@@ -3,7 +3,7 @@
 
 1. Firstly, we need to create a docker swarm with the following command
 
-docker swarm init --advertise-addr <host-1 ip address>
+docker swarm init --advertise-addr 10.40.41.14
 
 
 2. Then the host-1 also needs to input the following command

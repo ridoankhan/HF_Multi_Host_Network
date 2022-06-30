@@ -91,6 +91,15 @@ services:
       - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/crypto/peer/tls
       - /var/run/:/host/var/run/
       - ./:/etc/hyperledger/channel/
+    extra_hosts:
+      - "orderer.example.com:10.40.41.163"
+      - "orderer2.example.com:10.40.41.163"
+      - "orderer3.example.com:10.40.41.163"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"
+
     networks:
       - test
 
@@ -133,6 +142,14 @@ services:
       - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/crypto/peer/tls
       - /var/run/:/host/var/run/
       - ./:/etc/hyperledger/channel/
+    extra_hosts:
+      - "orderer.example.com:10.40.41.163"
+      - "orderer2.example.com:10.40.41.163"
+      - "orderer3.example.com:10.40.41.163"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"
     networks:
       - test
 
@@ -167,3 +184,11 @@ services:
       - ./../vm2/crypto-config/peerOrganizations/org2.example.com/:/etc/hyperledger/channel/crypto-config/peerOrganizations/org2.example.com/
       - ./../vm3/crypto-config/peerOrganizations/org3.example.com/:/etc/hyperledger/channel/crypto-config/peerOrganizations/org3.example.com/
       - ./../vm4/crypto-config/ordererOrganizations/example.com/:/etc/hyperledger/channel/crypto-config/ordererOrganizations/example.com/
+    extra_hosts:
+      - "orderer.example.com:10.40.41.163"
+      - "orderer2.example.com:10.40.41.163"
+      - "orderer3.example.com:10.40.41.163"
+      - "peer0.org2.example.com:10.40.41.164"
+      - "peer1.org2.example.com:10.40.41.164"
+      - "peer0.org3.example.com:10.40.41.163"
+      - "peer1.org3.example.com:10.40.41.163"
