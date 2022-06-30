@@ -51,7 +51,7 @@ chmod 777 -R *
 # Part-5: Run all the respective components containers on the hosts
 docker-compose up -d
 
-# Create channel and join peers to the channel
+# part-6: Create channel and join peers to the channel
 
 1. We can create the channel from host-1 by runnung
 
@@ -68,7 +68,7 @@ on host-2 and host-3, change the IP address in fetchChannelBlock() to host-4 ip 
 
 after this, we can check if a particular peer has joined the channel with the followin command
 
-docker exec -it <peer name> sh
+docker exec -it peer0.org1.example.com peer channel list
 peer channel list
 
 -> and also, can check the block height of all the peers with the following command
