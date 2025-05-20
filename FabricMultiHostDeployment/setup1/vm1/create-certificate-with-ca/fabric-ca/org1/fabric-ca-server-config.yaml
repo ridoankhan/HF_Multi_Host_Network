@@ -37,7 +37,7 @@
 #############################################################################
 
 # Version of config file
-version: 1.5.3
+version: v1.5.15
 
 # Server's listening port (default: 7054)
 port: 7054
@@ -348,6 +348,11 @@ idemix:
   # Specifies interval at which expired nonces are removed from datastore. Default value is 15 minutes.
   #  The value is expressed in the time.Duration format (see https://golang.org/pkg/time/#ParseDuration)
   noncesweepinterval: 15m
+
+  # Specifies the Elliptic Curve used by Identity Mixer.
+  # It can be any of: {"amcl.Fp256bn", "gurvy.Bn254", "amcl.Fp256Miraclbn"}.
+  # If unspecified, it defaults to 'amcl.Fp256bn'.
+  curve: amcl.Fp256bn
 
 #############################################################################
 # BCCSP (BlockChain Crypto Service Provider) section is used to select which

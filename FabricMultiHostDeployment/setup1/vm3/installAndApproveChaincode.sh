@@ -29,8 +29,7 @@ presetup() {
     popd
     echo Finished vendoring Go dependencies
 }
-
-presetup
+# presetup
 
 CHANNEL_NAME="mychannel"
 CC_RUNTIME_LANGUAGE="golang"
@@ -46,8 +45,7 @@ packageChaincode() {
         --label ${CC_NAME}_${VERSION}
     echo "===================== Chaincode is packaged on peer0.org3 ===================== "
 }
-
-packageChaincode
+# packageChaincode
 
 installChaincode() {
     setGlobalsForPeer0Org3
@@ -56,7 +54,7 @@ installChaincode() {
 
 }
 
-installChaincode
+# installChaincode
 
 queryInstalled() {
     setGlobalsForPeer0Org3
@@ -81,9 +79,8 @@ approveForMyOrg3() {
 
     echo "===================== chaincode approved from org 3 ===================== "
 }
-
-queryInstalled
-approveForMyOrg3
+# queryInstalled
+# approveForMyOrg3
 
 checkCommitReadyness() {
 
@@ -94,4 +91,4 @@ checkCommitReadyness() {
     echo "===================== checking commit readyness from org 3 ===================== "
 }
 
-checkCommitReadyness
+# checkCommitReadyness

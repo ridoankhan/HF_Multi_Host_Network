@@ -1,7 +1,7 @@
 docker rm -f $(docker ps -aq)
 
 
-docker volume prune -f
+docker volume prune --filter all=1
 
 sleep 1
 

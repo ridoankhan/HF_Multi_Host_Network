@@ -3,7 +3,7 @@
 
 1. Firstly, we need to create a docker swarm with the following command
 
-docker swarm init --advertise-addr 10.40.41.14
+docker swarm init --advertise-addr 192.168.90.43
 
 
 2. Then the host-1 also needs to input the following command
@@ -60,11 +60,11 @@ N.B.
     also updateAnchorPeers() with host-4 ip address
 
 
-chmod 777 create-channel.sh
+chmod 777 createChannel.sh
 ./createChannel.sh
 
-2. Then, we need to join the peers to the channel from the other hosts as well
-on host-2 and host-3, change the IP address in fetchChannelBlock() to host-4 ip address
+2. Then, we need to join the peers to the channel using ./joinChannel.sh script from the other hosts as well
+on host-2 and host-3, change the IP address in fetchChannelBlock() and updateAnchorPeers() to host-4 ip address
 
 after this, we can check if a particular peer has joined the channel with the followin command
 
